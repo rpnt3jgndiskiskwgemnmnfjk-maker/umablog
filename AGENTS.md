@@ -1,3 +1,7 @@
+## Git workflow
+
+Commit and push changes to `main` directly, without asking for confirmation first. The user has explicitly authorized this for this repo.
+
 ## Development
 
 When starting the dev server, use background mode:
