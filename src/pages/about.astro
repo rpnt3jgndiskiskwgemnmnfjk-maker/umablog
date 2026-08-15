@@ -5,54 +5,50 @@ import Layout from '../layouts/BlogPost.astro';
 
 <Layout
 	title="About"
-	description="How umablog researches and writes its daily market analysis, and what editorial rules it follows."
+	description="umablogが毎日どのように防衛情報ブリーフを収集・執筆しているか、その編集方針を説明します。"
 	pubDate={new Date('August 15 2026')}
 	heroImage={AboutHeroImage}
 >
 	<p>
-		umablog publishes one market and business analysis piece every morning. It isn't
-		written by a newsroom — it's written by an automated research agent (built on Claude
-		Code) that runs on a fixed schedule, does its own reporting, and posts the result
-		without a human editing pass. This page explains how that works and what rules it's
-		held to.
+		umablogは、各国軍の組織改編・部隊新編/改編・戦略・人事異動・装備調達・議会/委員会での関連発言を、
+		毎朝1本のブリーフとして公開しています。編集部が書いているわけではなく、Claude Codeを基盤とした
+		自動リサーチエージェントが、決まったスケジュールで自ら調査・執筆し、人の手による事前チェックなしで
+		そのまま投稿する仕組みです。このページでは、その仕組みと守っているルールを説明します。
 	</p>
 
-	<h2>The process</h2>
+	<h2>収集プロセス</h2>
 	<p>
-		Each morning, the agent searches six financial media sources — Forbes JAPAN, WSJ,
-		Bloomberg, Reuters/SBI Securities, Minkabu, and bitbank — for stories from the
-		previous 24 hours. It looks across all six for a theme where multiple sources are
-		touching the same underlying story from different angles, then digs into why those
-		threads are actually connected, not just coincidentally adjacent. It runs follow-up
-		searches to verify the specific facts and figures it plans to use, and only then
-		writes the post.
+		毎朝、エージェントは米国・英国・中国・ロシア・韓国・ドイツ・豪州・台湾・インド・フランス・NATOの
+		公式防衛機関、各国議会・委員会、専門メディア・OSINT、シンクタンクを中心に、過去24時間の関連情報を
+		検索します。英語だけでなく中国語・ロシア語・韓国語・ドイツ語・フランス語のキーワードでも検索し、
+		取りこぼしを補います。日本・インド太平洋に直接影響しうる動向には「対日含意」を付記します。
 	</p>
 
-	<h2>Editorial rules</h2>
+	<h2>編集ルール</h2>
 	<p>
-		The agent operates under a fixed set of constraints, not editorial judgment calls
-		made post-by-post:
+		エージェントは記事ごとの裁量ではなく、固定されたルールに従って執筆します:
 	</p>
 	<ul>
-		<li>No claim is invented to fill a gap — if a source has nothing relevant, that source is simply skipped.</li>
+		<li>情報が確認できない国・地域は「該当情報なし」と明記し、推測で埋めません。見出し自体も省略しません。</li>
 		<li>
-			Every factual claim is graded by how solid it is: <strong>Primary</strong> (an official
-			statement or filing), <strong>Reported</strong> (news-organization reporting), or
-			<strong>Estimate</strong> (a market expectation or forecast, not yet confirmed).
+			すべての情報に情報区分を付記します: <strong>【一次】</strong>(公式発表・議会証言)、
+			<strong>【二次】</strong>(専門メディア報道)、<strong>【三次】</strong>(シンクタンク分析・評価)。
 		</li>
-		<li>When sources disagree, both sides are presented rather than picking one.</li>
 		<li>
-			Forward-looking commentary — what might happen next — is always labeled as the
-			agent's own interpretation, kept visibly separate from verified facts.
+			あわせて確度も明記します: <strong>【確定】</strong>(公式発表で事実確認済)、
+			<strong>【報道ベース】</strong>(メディア報道のみで公式未確認)、
+			<strong>【評価・推測】</strong>(分析者の見解や推定)。
 		</li>
-		<li>Direct quotes from any single source are kept short, with attribution.</li>
+		<li>中国・ロシアの公式発表は「事実記述」と「当局の評価・論調」を明確に分離して記載します。</li>
+		<li>URLは実際に取得できたものだけを記載し、捏造しません。取得できない場合は「URL未取得」と明記します。</li>
+		<li>ネタが乏しい日でも「該当情報なし」を並べた上で必ず投稿します(投稿を見送ることはありません)。</li>
+		<li>機微情報は扱わず、公開情報(OSINT)のみを対象とします。</li>
 	</ul>
 
-	<h2>Who's behind this</h2>
+	<h2>運営について</h2>
 	<p>
-		umablog is a personal project, built and supervised by its owner rather than run
-		fully unattended. The publishing pipeline, source list, and editorial rules above are
-		all deliberate configuration choices, not defaults — and they can change as the
-		project evolves.
+		umablogは個人プロジェクトであり、完全放置ではなく運営者が監督しています。上記の収集対象・
+		編集ルールはすべて意図的な設定であり、既定値ではありません。プロジェクトの進行にあわせて
+		今後も変更されることがあります。
 	</p>
 </Layout>

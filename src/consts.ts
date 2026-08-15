@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'umablog';
 export const SITE_DESCRIPTION =
-	'Daily market and business analysis, synthesized every morning from global financial media.';
+	'各国軍の組織改編・戦略・装備動向を毎日追跡する、防衛情報OSINTデイリーブリーフ。';
