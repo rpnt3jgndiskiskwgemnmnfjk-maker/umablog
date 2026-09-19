@@ -1,0 +1,16 @@
+{
+	"name": "umablog — 防衛情報デイリーブリーフ",
+	"short_name": "umablog",
+	"description": "各国軍の組織改編・戦略・装備動向を毎日追跡する、防衛情報OSINTデイリーブリーフ。",
+	"lang": "ja",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#2337ff",
+	"icons": [
+		{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+		{ "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+		{ "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+	]
+}
